@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,6 +6,7 @@
     <h1 class="display-4">Welcome</h1>
     <p>CalculatorWeb is a web solution for calculating the Square root of two numbers and displaying which has a higher square root.</p>
     <p> Let's try it out!</p>
+
     <div>
         <form asp-controller="Home" asp-action="Index" method="POST">
             <input type="number" placeholder="First Number" name="firstNum">
@@ -13,18 +14,18 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-     @{
-          if(ViewBag.Message != null)
-          {
-              <div><span style="color:red;">ERROR:</span>@ViewBag.Message</div>
-          }
-      }     
     @{
-       if(ViewBag.Message1 != null)
-           {
-               <div>@ViewBag.Message1</div>
-           }
-      }
+        if(ViewBag.Message != null)
+        {
+            <div><span style="color:red;">ERROR:</span>@ViewBag.Message</div>
+        }
+    }
+    @{
+        if(ViewBag.Message1 != null)
+            {
+                <div>@ViewBag.Message1</div>
+            }
+        }
     @{
         if(ViewBag.Message2 != null)
             {
