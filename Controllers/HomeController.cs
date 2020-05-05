@@ -30,10 +30,14 @@ namespace CalculatorWeb.Controllers
         {
            int numberOne = int.Parse(firstNum);
            int numberTwo = int.Parse(secondNum);
+           if(numberOne == numberTwo||numberOne < 0 || numberTwo < 0)
+           {
+                ViewBag.Message ="ERROR:You're getting this error message because you either entered the same number or entered a negative value. Try again";
+           }
            double resultOne = Math.Sqrt(numberOne);
-            double resultTwo = Math.Sqrt(numberTwo);
-            ViewBag.Message1 = "Square root of " + numberOne + " = " + resultOne;
-            ViewBag.Message2 = "Square root of " + numberTwo + " = " + resultTwo;
+           double resultTwo = Math.Sqrt(numberTwo);
+           ViewBag.Message1 = "Square root of " + numberOne + " = " + resultOne;
+           ViewBag.Message2 = "Square root of " + numberTwo + " = " + resultTwo;
 
             if (resultOne > resultTwo)
             {
